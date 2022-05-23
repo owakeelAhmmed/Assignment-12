@@ -6,7 +6,7 @@ import Navbar from './Pages/Shared/Navbar';
 
 function App() {
     return (
-      <section>
+      <section className='max-w-7xl mx-auto'>
          <Navbar/>
           <Routes>
             <Route path="/" element={<Home/>} />

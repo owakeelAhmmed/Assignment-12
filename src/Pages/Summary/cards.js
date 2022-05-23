@@ -8,8 +8,8 @@ import img4 from '../../Images/feedback.png';
 const cards = () => {
   return (
     <section>
-        <div className='flex gap-5'>
-        <div class="card w-96 bg-base-100 shadow-xl">
+        <div className='flex sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-3 '>
+        <div class="card w-96 bg-primary shadow-xl">
               <div class="card-body">
                 <div className="flex justify-center">
                 <img className=' w-20' src={img1} alt="" />
@@ -18,7 +18,7 @@ const cards = () => {
                 <p className='justify-center'>If a dog chews shoes whose shoes does he choose?</p>
               </div>
             </div>
-          <div class="card w-96 bg-base-100 shadow-xl">
+          <div class="card w-96 bg-primary shadow-xl">
               <div class="card-body">
                 <div className="flex justify-center">
                 <img className=' w-20' src={img2} alt="" />
@@ -27,22 +27,22 @@ const cards = () => {
                 <p className='justify-center'>If a dog chews shoes whose shoes does he choose?</p>
               </div>
             </div>
-          <div class="card w-96 bg-base-100 shadow-xl">
+          <div class="card w-96 bg-primary shadow-xl">
               <div class="card-body">
                 <div className="flex justify-center">
                 <img className=' w-20' src={img3} alt="" />
                 </div>
-                <h2 class="card-title mt-1">Card title!</h2>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
+                <h2 class="card-title justify-center mt-1">Card title!</h2>
+                <p className='justify-center'>If a dog chews shoes whose shoes does he choose?</p>
               </div>
             </div>
-          <div class="card w-96 bg-base-100 shadow-xl">
+          <div class="card w-96 bg-primary shadow-xl">
               <div class="card-body">
                 <div className="flex justify-center">
                 <img className=' w-20' src={img4} alt="" />
                 </div>
-                <h2 class="card-title  mt-1">Card title!</h2>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
+                <h2 class="card-title justify-center  mt-1">Card title!</h2>
+                <p className="justify-center">If a dog chews shoes whose shoes does he choose?</p>
               </div>
             </div>
         </div>
