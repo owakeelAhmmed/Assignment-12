@@ -1,12 +1,17 @@
 import React from 'react';
+import Product from '../Product/Product';
 import Headder from './Headder';
-
+import Footer from '../Footer/Footer';
+import Summary from '../Summary/Summary';
 
 const Home = () => {
     return (
-        <div className='bg-primary h-screen'>
+        <section className='bg-primary h-60'>
             <Headder/>
-        </div>
+            <Product/>
+            <Summary/>
+            <Footer/>
+        </section>
     );
 };
 
