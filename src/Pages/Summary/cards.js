@@ -8,7 +8,7 @@ import img4 from '../../Images/feedback.png';
 const cards = () => {
   return (
     <section>
-        <div className='flex sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-3 '>
+        <div className='flex gap-3 '>
         <div class="card w-96 bg-primary shadow-xl">
               <div class="card-body">
                 <div className="flex justify-center">

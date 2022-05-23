@@ -6,7 +6,7 @@ import Cards from '../Summary/cards';
 
 const Summary = () => {
   return (
-    <section className=' bg-gradient-to-r from-pink-300  via-purple-400 to-indigo-300 px-12'>
+    <section className=' bg-gradient-to-r sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 from-pink-300  via-purple-400 to-indigo-300 px-12'>
           <div className=''>
             <h1 className='text-primary text-4xl text-center font-bold'>Project Summary</h1>
           </div>
