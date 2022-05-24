@@ -3,6 +3,8 @@ import './App.css';
 import Home from './Pages/Home/Home';
 import Login from './Pages/Login/Login';
 import SignUp from './Pages/Login/SignUp';
+import ProvideGear from './Pages/ProvideGear/ProvideGear';
+import RequireAuth from './Pages/RequireAuth/RequireAuth';
 import Navbar from './Pages/Shared/Navbar';
 
 function App() {
@@ -11,6 +13,11 @@ function App() {
          <Navbar/>
           <Routes>
             <Route path="/" element={<Home/>} />
+            <Route path="/providegear" element={
+            <RequireAuth>
+              <ProvideGear/>
+            </RequireAuth>
+            } />
             <Route path="/login" element={<Login/>} />
             <Route path="/signup" element={<SignUp/>} />
           </Routes>
