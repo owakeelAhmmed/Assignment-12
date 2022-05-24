@@ -12,7 +12,7 @@ const Login = () => {
   const [
     signInWithEmailAndPassword,
     user,
-    loading,
+    loading,    
     error,
   ] = useSignInWithEmailAndPassword(auth);
 

@@ -45,9 +45,6 @@ const SignUp = () => {
 
 
 
-
-
-
   return (
     <section className='bg-gradient-to-r from-pink-300  via-purple-400 to-indigo-300'>
       <div className='flex h-screen justify-center items-center'>
