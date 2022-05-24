@@ -9,7 +9,7 @@ const cards = () => {
   return (
     <section>
         <div className='flex gap-3 '>
-        <div className="card w-96 bg-primary shadow-xl">
+        <div className="card  bg-primary shadow-xl">
               <div className="card-body">
                 <div className="flex justify-center">
                 <img className=' w-20' src={img1} alt="" />
@@ -18,7 +18,7 @@ const cards = () => {
                 <p className='justify-center'>If a dog chews shoes whose shoes does he choose?</p>
               </div>
             </div>
-          <div className="card w-96 bg-primary shadow-xl">
+          <div className="card  bg-primary shadow-xl">
               <div className="card-body">
                 <div className="flex justify-center">
                 <img className=' w-20' src={img2} alt="" />
@@ -27,7 +27,7 @@ const cards = () => {
                 <p className='justify-center'>If a dog chews shoes whose shoes does he choose?</p>
               </div>
             </div>
-          <div className="card w-96 bg-primary shadow-xl">
+          <div className="card  bg-primary shadow-xl">
               <div className="card-body">
                 <div className="flex justify-center">
                 <img className=' w-20' src={img3} alt="" />
@@ -36,7 +36,7 @@ const cards = () => {
                 <p className='justify-center'>If a dog chews shoes whose shoes does he choose?</p>
               </div>
             </div>
-          <div className="card w-96 bg-primary shadow-xl">
+          <div className="card  bg-primary shadow-xl">
               <div className="card-body">
                 <div className="flex justify-center">
                 <img className=' w-20' src={img4} alt="" />

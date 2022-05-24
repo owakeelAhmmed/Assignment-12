@@ -6,7 +6,7 @@ import Summary from '../Summary/Summary';
 
 const Home = () => {
     return (
-        <section className='bg-primary h-60'>
+        <section className=' h-60'>
             <Headder/>
             <Product/>
             <Summary/>
