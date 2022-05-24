@@ -9,39 +9,39 @@ const cards = () => {
   return (
     <section>
         <div className='flex gap-3 '>
-        <div class="card w-96 bg-primary shadow-xl">
-              <div class="card-body">
+        <div className="card w-96 bg-primary shadow-xl">
+              <div className="card-body">
                 <div className="flex justify-center">
                 <img className=' w-20' src={img1} alt="" />
                 </div>
-                <h2 class="card-title justify-center mt-1">Card title!</h2>
+                <h2 className="card-title justify-center mt-1">Card title!</h2>
                 <p className='justify-center'>If a dog chews shoes whose shoes does he choose?</p>
               </div>
             </div>
-          <div class="card w-96 bg-primary shadow-xl">
-              <div class="card-body">
+          <div className="card w-96 bg-primary shadow-xl">
+              <div className="card-body">
                 <div className="flex justify-center">
                 <img className=' w-20' src={img2} alt="" />
                 </div>
-                <h2 class="card-title justify-center mt-1">Card title!</h2>
+                <h2 className="card-title justify-center mt-1">Card title!</h2>
                 <p className='justify-center'>If a dog chews shoes whose shoes does he choose?</p>
               </div>
             </div>
-          <div class="card w-96 bg-primary shadow-xl">
-              <div class="card-body">
+          <div className="card w-96 bg-primary shadow-xl">
+              <div className="card-body">
                 <div className="flex justify-center">
                 <img className=' w-20' src={img3} alt="" />
                 </div>
-                <h2 class="card-title justify-center mt-1">Card title!</h2>
+                <h2 className="card-title justify-center mt-1">Card title!</h2>
                 <p className='justify-center'>If a dog chews shoes whose shoes does he choose?</p>
               </div>
             </div>
-          <div class="card w-96 bg-primary shadow-xl">
-              <div class="card-body">
+          <div className="card w-96 bg-primary shadow-xl">
+              <div className="card-body">
                 <div className="flex justify-center">
                 <img className=' w-20' src={img4} alt="" />
                 </div>
-                <h2 class="card-title justify-center  mt-1">Card title!</h2>
+                <h2 className="card-title justify-center  mt-1">Card title!</h2>
                 <p className="justify-center">If a dog chews shoes whose shoes does he choose?</p>
               </div>
             </div>

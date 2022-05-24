@@ -11,13 +11,13 @@ const Summary = () => {
             <h1 className='text-primary text-4xl text-center font-bold'>Project Summary</h1>
           </div>
        
-          <div class="card mb-3 mt-16 lg:card-side bg-primary shadow-xl">
+          <div className="card mb-3 mt-16 lg:card-side bg-primary shadow-xl">
             <img className='max-w-lg h-75' src={img1} alt="Album"/>
-            <div class="card-body">
-              <h2 class="card-title">New album is released!</h2>
+            <div className="card-body">
+              <h2 className="card-title">New album is released!</h2>
               <p>Click the button to listen on Spotiwhy app.</p>
-              <div class="card-actions justify-end">
-                <button class="btn btn-secondary">Listen</button>
+              <div className="card-actions justify-end">
+                <button className="btn btn-secondary">Listen</button>
               </div>
             </div>
           </div>
