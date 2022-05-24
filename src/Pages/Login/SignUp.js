@@ -1,48 +1,79 @@
 import React from 'react';
-import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useSignInWithGoogle, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import Loding from '../Shared/Loading';
 
-const Login = () => {
+
+
+const SignUp = () => {
   const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
   const { register, formState: { errors }, handleSubmit } = useForm();
 
   const [
-    signInWithEmailAndPassword,
+    createUserWithEmailAndPassword,
     user,
     loading,
     error,
-  ] = useSignInWithEmailAndPassword(auth);
+  ] = useCreateUserWithEmailAndPassword(auth);
+
+
+  const [updateProfile, updating, updateError] = useUpdateProfile(auth);
+  const navigate = useNavigate();
+
   let signInError;
 
-  if( loading || gLoading){
+  if( loading || gLoading || updating){
     return <Loding/>
   }
 
-  if(user || gUser){
+  if(user || gUser || updateError){
     console.log(user || gUser)
   }
 
   if( error || gError){
-    signInError= <p className='text-red-600 text-center'><small>{error?.message || gError?.message}</small></p>
+    signInError= <p className='text-red-600 text-center'><small>{error?.message || gError?.message || updateError?.message}</small></p>
   }
-  const onSubmit = data => {
+  const onSubmit = async data => {
     console.log(data);
-  signInWithEmailAndPassword(data.email, data.password)
-  
+    await createUserWithEmailAndPassword(data.email, data.password)
+    await updateProfile({ displayName: data.name });
+    navigate('/')
   }
+
+
+
+
+
+
 
   return (
     <section className='bg-gradient-to-r from-pink-300  via-purple-400 to-indigo-300'>
       <div className='flex h-screen justify-center items-center'>
       <div className=" card w-96 border-gray-400 shadow-2xl ">
           <div className="card-body">
-            <h2 className=" text-white text-center font-bold text-3xl">Login</h2>
+            <h2 className=" text-white text-center font-bold text-3xl">SignUp</h2>
 
             <form onSubmit={handleSubmit(onSubmit)}>
 
+            <div class="form-control w-full max-w-xs">
+                
+                  <input 
+                  type="text" 
+                  placeholder="Enter your name" 
+                  class="input input-bordered w-full max-w-xs" 
+                  {...register("name", {
+                    required:{
+                      value: true,
+                      message: 'Name is Required'
+                    }
+                  })}
+                  />
+                  <label class="label">
+                    {errors.name?.type === 'required' && <span class="label-text-alt font-bold text-red-600">{errors.name.message}</span>}
+                  </label>
+            </div>
             <div class="form-control w-full max-w-xs">
                   <label class="label">
                     <span class="label-text text-primary"></span>
@@ -91,11 +122,12 @@ const Login = () => {
                     {errors.password?.type === 'minLength' && <span class="label-text-alt font-bold text-red-600">{errors.password.message}</span>}
                   </label>
             </div>
+            
                   {signInError}
 
-                <input className='btn w-full max-w-xs text-white' type="submit" value="Login" />
+                <input className='btn w-full max-w-xs text-white' type="submit" value="SignUp" />
           </form>
-                  <small className='text-center text-primary font-bold mt-2'>New to Super-Gear? <Link to='/signup' className="text-white">Create New Account</Link></small>
+                  <small className='text-center text-primary font-bold mt-2'>Already have an account? <Link to='/login' className="text-white">Please login!</Link></small>
             <div className="divider text-white co">OR</div>
             
             <button 
@@ -110,4 +142,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default SignUp;
