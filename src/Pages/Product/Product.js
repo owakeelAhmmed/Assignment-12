@@ -4,7 +4,7 @@ import ProductCard from './ProductCard';
 
 const Product = () => {
     const [products, setProducts] = useState([]);
-        console.log(products)
+    // const [services, setServices] = useState(null);
 
 
     useEffect(() => {
@@ -18,9 +18,6 @@ const Product = () => {
 
 
 
-
-
-
   return (
         <section className='bg-gradient-to-r from-pink-300  via-purple-400 to-indigo-300 px-12'>
           <div className=''>
@@ -30,7 +27,8 @@ const Product = () => {
                 {
                   products.map(product => 
                   <ProductCard 
-                    product={product} 
+                    product={product}
+                    // setServices={setServices} 
                     key={product._id}
                   
                   />)
