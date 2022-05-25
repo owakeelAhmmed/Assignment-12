@@ -20,7 +20,11 @@ function App() {
               <Product/>
             </RequireAuth>
             } />
-            <Route path="/purchase/:id" element={<Purchase/>} />
+            <Route path="/purchase/:id" element={
+            <RequireAuth>
+              <Purchase/>
+            </RequireAuth>
+            } />
             <Route path="/login" element={<Login/>} />
             <Route path="/signup" element={<SignUp/>} />
             <Route path="/*" element={<NotFound/>} />
