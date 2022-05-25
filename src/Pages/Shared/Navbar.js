@@ -18,7 +18,7 @@ function Navbar() {
 
   const menuItems = <>
             <li><Link to='/'>Home</Link></li>
-            <li><Link to='/providegear'>Tools</Link></li>
+            <li><Link to='/product'>Tools</Link></li>
             <li><Link to='/'>Home</Link></li>
             <li><Link to='/'>Home</Link></li>
             <li>{user ? <button onClick={logout} class="btn btn-outline btn-secondary">SignOut</button> : <Link to='/login'>Login</Link>}</li>

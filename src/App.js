@@ -3,7 +3,8 @@ import './App.css';
 import Home from './Pages/Home/Home';
 import Login from './Pages/Login/Login';
 import SignUp from './Pages/Login/SignUp';
-import ProvideGear from './Pages/ProvideGear/ProvideGear';
+import NotFound from './Pages/NotFound/NotFound';
+import Product from './Pages/Product/Product';
 import RequireAuth from './Pages/RequireAuth/RequireAuth';
 import Navbar from './Pages/Shared/Navbar';
 
@@ -13,13 +14,14 @@ function App() {
          <Navbar/>
           <Routes>
             <Route path="/" element={<Home/>} />
-            <Route path="/providegear" element={
+            <Route path="/product" element={
             <RequireAuth>
-              <ProvideGear/>
+              <Product/>
             </RequireAuth>
             } />
             <Route path="/login" element={<Login/>} />
             <Route path="/signup" element={<SignUp/>} />
+            <Route path="/*" element={<NotFound/>} />
           </Routes>
       </section>
     );
