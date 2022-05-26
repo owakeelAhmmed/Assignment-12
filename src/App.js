@@ -11,7 +11,7 @@ import Navbar from './Pages/Shared/Navbar';
 
 function App() {
     return (
-      <section className='max-w-7xl mx-auto'>
+      <section className='max-w-7xl mx-auto bg-gradient-to-r from-pink-300  via-purple-400 to-indigo-300'>
          <Navbar/>
           <Routes>
             <Route path="/" element={<Home/>} />

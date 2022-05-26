@@ -12,8 +12,6 @@ const Product = () => {
             .then(Response => Response.json())
             .then(data => setProducts(data))
 
-
-
     },[]);
 
 

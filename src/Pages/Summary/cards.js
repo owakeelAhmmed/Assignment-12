@@ -12,37 +12,37 @@ const cards = () => {
         <div className="card  bg-primary shadow-xl">
               <div className="card-body">
                 <div className="flex justify-center">
-                <img className=' w-20' src={img1} alt="" />
+                <img className=' w-10' src={img1} alt="" />
                 </div>
-                <h2 className="card-title justify-center mt-1">Card title!</h2>
-                <p className='justify-center'>If a dog chews shoes whose shoes does he choose?</p>
+                <h2 className="card-title justify-center mt-1">Countries</h2>
+                <p className=' text-center text-white font-bold text-2xl'>66</p>
               </div>
             </div>
           <div className="card  bg-primary shadow-xl">
               <div className="card-body">
                 <div className="flex justify-center">
-                <img className=' w-20' src={img2} alt="" />
+                <img className=' w-10' src={img2} alt="" />
                 </div>
-                <h2 className="card-title justify-center mt-1">Card title!</h2>
-                <p className='justify-center'>If a dog chews shoes whose shoes does he choose?</p>
+                <h2 className="card-title justify-center mt-1">Complete Project</h2>
+                <p className='text-center text-white font-bold text-2xl'>823+</p>
               </div>
             </div>
           <div className="card  bg-primary shadow-xl">
               <div className="card-body">
                 <div className="flex justify-center">
-                <img className=' w-20' src={img3} alt="" />
+                <img className=' w-12' src={img3} alt="" />
                 </div>
-                <h2 className="card-title justify-center mt-1">Card title!</h2>
-                <p className='justify-center'>If a dog chews shoes whose shoes does he choose?</p>
+                <h2 className="card-title justify-center mt-1">Happy Clients</h2>
+                <p className='text-center text-white font-bold text-2xl'>530+</p>
               </div>
             </div>
           <div className="card  bg-primary shadow-xl">
               <div className="card-body">
                 <div className="flex justify-center">
-                <img className=' w-20' src={img4} alt="" />
+                <img className=' w-10' src={img4} alt="" />
                 </div>
-                <h2 className="card-title justify-center  mt-1">Card title!</h2>
-                <p className="justify-center">If a dog chews shoes whose shoes does he choose?</p>
+                <h2 className="card-title justify-center  mt-1">Feedbacks</h2>
+                <p className="text-center text-white font-bold text-2xl">623+</p>
               </div>
             </div>
         </div>

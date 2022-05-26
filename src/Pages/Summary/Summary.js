@@ -25,7 +25,7 @@ const Summary = () => {
 
 {/* //feedback card  */}
 
-          <div>
+          <div className=''>
             <Cards/>
           </div>
 

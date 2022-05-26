@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <section>
+        <section className='mt-8 bg-gradient-to-r from-pink-300  via-purple-400 to-indigo-300'>
             <footer className="footer p-10 bg-base-300 text-base-content">
                 <div>
                     <span className="footer-title">Services</span> 
