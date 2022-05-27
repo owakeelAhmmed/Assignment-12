@@ -21,7 +21,7 @@ import AddProduct from './Pages/AddProduct/AddProduct';
 
 function App() {
     return (
-      <section className='max-w-7xl mx-auto bg-gradient-to-r from-pink-300  via-purple-400 to-indigo-300 '>
+      <section className='max-w-7xl mx-auto  '>
         <Toaster />
          <Navbar/>
           <Routes>
@@ -40,7 +40,7 @@ function App() {
             <RequireAuth>
               <Dashboard/>
             </RequireAuth>} >
-              <Route path="myorder" element={<MyOrder/>}/>
+              <Route index element={<MyOrder/>}/>
               <Route path="addproduct" element={<AddProduct/>}/>
 
 
