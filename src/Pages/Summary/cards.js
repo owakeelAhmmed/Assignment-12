@@ -23,8 +23,8 @@ const cards = () => {
                 <div className="flex justify-center">
                 <img className=' w-10' src={img2} alt="" />
                 </div>
-                <h2 className="card-title justify-center mt-1">Complete Project</h2>
-                <p className='text-center text-white font-bold text-2xl'>823+</p>
+                <h2 className="card-title justify-center mt-1">Oder Complete</h2>
+                <p className='text-center text-white font-bold text-2xl'>823 M+</p>
               </div>
             </div>
           <div className="card  bg-primary shadow-xl">
@@ -33,7 +33,7 @@ const cards = () => {
                 <img className=' w-12' src={img3} alt="" />
                 </div>
                 <h2 className="card-title justify-center mt-1">Happy Clients</h2>
-                <p className='text-center text-white font-bold text-2xl'>530+</p>
+                <p className='text-center text-white font-bold text-2xl'>530 K+</p>
               </div>
             </div>
           <div className="card  bg-primary shadow-xl">
@@ -42,7 +42,7 @@ const cards = () => {
                 <img className=' w-10' src={img4} alt="" />
                 </div>
                 <h2 className="card-title justify-center  mt-1">Feedbacks</h2>
-                <p className="text-center text-white font-bold text-2xl">623+</p>
+                <p className="text-center text-white font-bold text-2xl">623 0nK+</p>
               </div>
             </div>
         </div>

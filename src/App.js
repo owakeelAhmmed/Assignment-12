@@ -8,10 +8,19 @@ import Product from './Pages/Product/Product';
 import Purchase from './Pages/Product/Purchase';
 import RequireAuth from './Pages/RequireAuth/RequireAuth';
 import Navbar from './Pages/Shared/Navbar';
+import toast, { Toaster } from 'react-hot-toast';
+import Dashboard from './Pages/Dashboard/Dashboard';
+import Blogs from './Pages/Blogs/Blogs';
+
+
+
+
+
 
 function App() {
     return (
-      <section className='max-w-7xl mx-auto bg-gradient-to-r from-pink-300  via-purple-400 to-indigo-300'>
+      <section className='max-w-7xl mx-auto bg-gradient-to-r from-pink-300  via-purple-400 to-indigo-300 '>
+        <Toaster />
          <Navbar/>
           <Routes>
             <Route path="/" element={<Home/>} />
@@ -25,6 +34,13 @@ function App() {
               <Purchase/>
             </RequireAuth>
             } />
+            <Route path="/dashboard" element={
+            <RequireAuth>
+              <Dashboard/>
+            </RequireAuth>
+            
+            } />
+            <Route path="/blogs" element={<Blogs/>} />
             <Route path="/login" element={<Login/>} />
             <Route path="/signup" element={<SignUp/>} />
             <Route path="/*" element={<NotFound/>} />
