@@ -11,8 +11,9 @@ import Navbar from './Pages/Shared/Navbar';
 import toast, { Toaster } from 'react-hot-toast';
 import Dashboard from './Pages/Dashboard/Dashboard';
 import Blogs from './Pages/Blogs/Blogs';
-import MyOrder from './Pages/MyOrder/MyOrder';
+import MyOrder from './Pages/Dashboard/MyOrder';
 import AddProduct from './Pages/AddProduct/AddProduct';
+import AllUsers from './Pages/Dashboard/AllUsers';
 
 
 
@@ -42,6 +43,7 @@ function App() {
             </RequireAuth>} >
               <Route index element={<MyOrder/>}/>
               <Route path="addproduct" element={<AddProduct/>}/>
+              <Route path="alluser" element={<AllUsers/>}/>
 
 
             </Route>
