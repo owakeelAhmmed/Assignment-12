@@ -8,7 +8,7 @@ const Product = () => {
 
 
     useEffect(() => {
-      fetch('http://localhost:5000/product') 
+      fetch('https://agile-scrubland-82961.herokuapp.com/product') 
             .then(Response => Response.json())
             .then(data => setProducts(data))
 

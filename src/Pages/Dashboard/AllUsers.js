@@ -9,7 +9,7 @@ import Loading from '../Shared/Loading';
 const AllUsers = () => {
   const [user] = useAuthState(auth);
   const makeAdmin = () =>{
-    fetch(`http://localhost:5000/user/admin/${user.email}`,{
+    fetch(`https://agile-scrubland-82961.herokuapp.com/user/admin/${user.email}`,{
       method: 'PUT',
       headers:{
         authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -27,7 +27,7 @@ const AllUsers = () => {
 
 
 
-  const {data: users, isLoading, refetch} = useQuery('users', () => fetch('http://localhost:5000/user',{
+  const {data: users, isLoading, refetch} = useQuery('users', () => fetch('https://agile-scrubland-82961.herokuapp.com/user',{
     method: 'GET',
     headers:{
       authorization: `Bearer ${localStorage.getItem('accessToken')}`

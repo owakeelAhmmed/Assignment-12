@@ -12,7 +12,7 @@ const Purchase = () => {
 
     useEffect(() => {
         
-        fetch(`http://localhost:5000/product/${id}`)
+        fetch(`https://agile-scrubland-82961.herokuapp.com/product/${id}`)
         .then(response => response.json())
         .then(data => setItems(data))
     }, []);
@@ -30,7 +30,7 @@ const Purchase = () => {
         
       const booking = {productId, userName, userEmail, ordername, address, number};
 
-      fetch('http://localhost:5000/booking', {
+      fetch('https://agile-scrubland-82961.herokuapp.com/booking', {
         method: 'POST',
         headers:{
           'content-type': 'application/json'

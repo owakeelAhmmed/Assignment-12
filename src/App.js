@@ -22,7 +22,7 @@ import AllUsers from './Pages/Dashboard/AllUsers';
 
 function App() {
     return (
-      <section className='max-w-7xl mx-auto  '>
+      <section className='max-w-7xl mx-auto'>
         <Toaster />
          <Navbar/>
           <Routes>

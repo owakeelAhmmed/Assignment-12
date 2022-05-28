@@ -11,7 +11,7 @@ const useToken = user =>{
     const currenUser = {email: email };
     if(email){
 
-      fetch(`http://localhost:5000/user/${email}`,{
+      fetch(`https://agile-scrubland-82961.herokuapp.com/user/${email}`,{
 
       method:'PUT',
       headers:{
