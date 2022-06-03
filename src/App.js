@@ -12,8 +12,13 @@ import toast, { Toaster } from 'react-hot-toast';
 import Dashboard from './Pages/Dashboard/Dashboard';
 import Blogs from './Pages/Blogs/Blogs';
 import MyOrder from './Pages/Dashboard/MyOrder';
-import AddProduct from './Pages/AddProduct/AddProduct';
 import AllUsers from './Pages/Dashboard/AllUsers';
+import Payment from './Pages/Dashboard/Payment';
+import AddProduct from './Pages/Dashboard/AddProduct';
+import AddReview from './Pages/Dashboard/AddReview';
+import ManageProducts from './Pages/Dashboard/ManageProducts';
+import MyProfile from './Pages/Dashboard/MyProfile';
+
 
 
 
@@ -37,19 +42,20 @@ function App() {
               <Purchase/>
             </RequireAuth>
             } />
+            {/* Dashboard */}
             <Route path="/dashboard" element={
             <RequireAuth>
               <Dashboard/>
             </RequireAuth>} >
               <Route index element={<MyOrder/>}/>
               <Route path="addproduct" element={<AddProduct/>}/>
+              <Route path="addreview" element={<AddReview/>}/>
+              <Route path="myprofile" element={<MyProfile/>}/>
+              <Route path="manageproduct" element={<ManageProducts/>}/>
+              <Route path="payment/:id" element={<Payment/>}/>
               <Route path="alluser" element={<AllUsers/>}/>
-
-
             </Route>
-            <Route>
-              
-            </Route>
+            {/* Dashboard- end */}
             <Route path="/blogs" element={<Blogs/>} />
             <Route path="/login" element={<Login/>} />
             <Route path="/signup" element={<SignUp/>} />

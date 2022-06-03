@@ -1,12 +1,13 @@
 import { signOut } from 'firebase/auth';
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 
 const MyOrder = () => {
 
   const [orders, setOrder] = useState([]);
+  console.log(orders)
   const [user] = useAuthState(auth);
   const navigate = useNavigate();
 
@@ -39,10 +40,10 @@ const MyOrder = () => {
 
   return (
     <div>
-      <h1 className='text-center text-4xl'>Your Order{orders.length}</h1>
+      <h1 className='text-4xl text-primary mt-3 mb-3 text-center font-bold '>Your Order{orders.length}</h1>
 
-      <div class="overflow-x-auto">
-            <table class="table w-full">
+      <div className="overflow-x-auto">
+            <table className="table w-full">
               {/* <!-- head --> */}
               <thead>
                 <tr>
@@ -50,16 +51,23 @@ const MyOrder = () => {
                   <th>Name</th>
                   <th>Email</th>
                   <th>Order Name</th>
+                  <th>Payment</th>
                 </tr>
               </thead>
               <tbody>
                 {/* <!-- row 1 --> */}
                 {
                   orders.map((order,index) => <tr>
-                    <th>{index+1} </th>
-                    <td>{user.displayName}</td>
-                    <td>{user.email}</td>
-                    <td>{order.ordername}</td>
+                    <th className='text-primary'>{index+1} </th>
+                    <td className='text-primary'>{user.displayName}</td>
+                    <td className='text-primary'>{user.email}</td>
+                    <td className='text-primary'>{order.ordername}</td>
+                    <td>{(order.price && !order.paid) && <Link to={`/dashboard/payment/${order._id}`}><button className='btn btn-xs bg-green-600'>pay</button></Link>}
+                    {(order.price && order.paid) && <div>
+                      <span className='text-green-600'>paid</span>
+                      </div>
+                      }
+                    </td>
                   </tr>)
                 }
                 
