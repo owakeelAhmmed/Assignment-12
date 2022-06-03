@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const ProductCard = ({product}) => {
-  const {_id, name, picture} = product;
+  const {_id, name, picture, description, price, quantity} = product;
 
   const navigate = useNavigate();
 
@@ -14,21 +14,24 @@ const ProductCard = ({product}) => {
 
 
   return (
-    <div> 
-      <div >
-          <div className="bg-gradient-to-r from-pink-300  via-purple-400 to-indigo-300 card bg-base-100 shadow-xl">
-              <figure className="px-10 pt-10">
-                <img src={picture} />
-              </figure>
-              <div className="card-body items-center text-center">
-                <h2 className="card-title">{name}</h2>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
-                <div className="card-actions">
-                  <button onClick={() => navigateToPurchase(_id)} className="btn btn-primary">Buy Now</button>
-                </div>
+      <div> 
+            <div>
+              <div style={{height:"480px"}} className="shadow-xl ">
+              <div className="">
+                  <img  className='p-6 w-40 mx-auto' src={picture} />
               </div>
-            </div>   
-          </div>
+              <div className="card-body items-center text-center">
+                  <h2 className="card-title text-primary">{name}</h2>
+                  <p className='text-primary'>{description}</p>
+                  <p className='text-primary'>Price: {price}</p>
+                  <p className='text-primary'>Quantity: {quantity}</p>
+
+                </div>
+                  <div className="card-actions flex justify-center items-center">
+                  <button onClick={() => navigateToPurchase(_id)} className="btn btn-primary">Buy Now</button>
+                  </div>
+            </div> 
+       </div>
       </div>
   );
 };
